@@ -44,7 +44,7 @@ const router = createBrowserRouter([
   // Main routes
   {
     path: '/',
-    loader: privateRoute,
+    // loader: privateRoute,
     lazy: async () => {
       const AppShell = await import('./components/app-shell')
       return { Component: AppShell.default }

@@ -42,13 +42,13 @@ export default function Nav({
 }: NavProps) {
   const renderLink = ({ sub, ...rest }: SideLink) => {
 
-    const { hasPermission: hasSettingsViewPermission } = usePermissions({
-      permissions: ['settings:view'],
-    })
+    // const { hasPermission: hasSettingsViewPermission } = usePermissions({
+    //   permissions: ['settings:view'],
+    // })
 
-    if(!hasSettingsViewPermission && rest.title === 'Settings') {
-      return null;
-    }
+    // if(!hasSettingsViewPermission && rest.title === 'Settings') {
+    //   return null;
+    // }
 
     const key = `${rest.title}-${rest.href}`
     if (isCollapsed && sub)
