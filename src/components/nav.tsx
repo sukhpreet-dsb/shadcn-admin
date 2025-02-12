@@ -20,6 +20,9 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from './ui/tooltip'
+import {
+  IconLogout2
+} from '@tabler/icons-react'
 import { cn } from '@/lib/utils'
 import useCheckActiveNav from '@/hooks/use-check-active-nav'
 import { SideLink } from '@/data/sidelinks'
@@ -72,14 +75,17 @@ export default function Nav({
     <div
       data-collapsed={isCollapsed}
       className={cn(
-        'group border-b bg-background py-2 transition-[max-height,padding] duration-500 data-[collapsed=true]:py-2 md:border-none',
+        'flex flex-col justify-around items-center group border-b bg-background py-2 transition-[max-height,padding] duration-500 data-[collapsed=true]:py-2 md:border-none',
         className
       )}
     >
       <TooltipProvider delayDuration={0}>
-        <nav className='grid gap-1 group-[[data-collapsed=true]]:justify-center group-[[data-collapsed=true]]:px-2'>
+        <nav className='w-full mt-24 grid gap-1 group-[[data-collapsed=true]]:justify-center group-[[data-collapsed=true]]:px-2'>
           {links.map(renderLink)}
         </nav>
+        <div className='flex items-center gap-4 group-[[data-collapsed=true]]:justify-center group-[[data-collapsed=true]]'>
+          {isCollapsed ? <IconLogout2 size={18}/> : <div className='flex items-center gap-4 text-xs'><IconLogout2 size={18}/> Logout</div> }
+        </div>
       </TooltipProvider>
     </div>
   )

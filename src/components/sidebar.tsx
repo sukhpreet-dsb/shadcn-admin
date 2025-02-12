@@ -5,6 +5,7 @@ import { Button } from './custom/button'
 import Nav from './nav'
 import { cn } from '@/lib/utils'
 import { sidelinks } from '@/data/sidelinks'
+import logo from "@/assets/Group.png"
 
 interface SidebarProps extends React.HTMLAttributes<HTMLElement> {
   isCollapsed: boolean
@@ -30,7 +31,7 @@ export default function Sidebar({
   return (
     <aside
       className={cn(
-        `fixed left-0 right-0 top-0 z-50 w-full border-r-2 border-r-muted transition-[width] md:bottom-0 md:right-auto md:h-svh ${isCollapsed ? 'md:w-14' : 'md:w-64'}`,
+        `bg-[#001933] fixed left-0 right-0 top-0 z-50 w-full border-r-2 border-r-muted transition-[width] md:bottom-0 md:right-auto md:h-svh ${isCollapsed ? 'md:w-14' : 'md:w-64'}`,
         className
       )}
     >
@@ -46,13 +47,8 @@ export default function Sidebar({
           sticky
           className='z-50 flex justify-between px-4 py-3 shadow-sm md:px-4'
         >
-          <div className={`flex items-center ${!isCollapsed ? 'gap-2' : ''}`}>
-            <h1>Logo </h1>
-            <div
-              className={`flex flex-col justify-end truncate ${isCollapsed ? 'invisible w-0' : 'visible w-auto'}`}
-            >
-              <span className='font-medium'>DS Admin</span>
-            </div>
+          <div className={`sm:mt-0 md:mt-28 flex items-center sm:justify-start md:justify-center w-full ${!isCollapsed ? 'gap-2' : ''}`}>
+            <img src={logo} alt='logo' />
           </div>
 
           {/* Toggle Button in mobile */}
@@ -83,7 +79,7 @@ export default function Sidebar({
           onClick={() => setIsCollapsed((prev) => !prev)}
           size='icon'
           variant='outline'
-          className='absolute -right-5 top-1/2 z-50 hidden rounded-full md:inline-flex'
+          className='absolute -right-5 top-[15%] z-50 hidden rounded-full md:inline-flex bg-[#001933]'
         >
           <IconChevronsLeft
             stroke={1.5}

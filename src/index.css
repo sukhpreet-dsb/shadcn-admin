@@ -8,8 +8,8 @@
     --header-height: 4rem;
 
     /* CSS Variables for light theme */
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* --background: 211, 100%, 10%, 1; */
+    --foreground: 183, 72%, 66%, 1;
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -33,7 +33,7 @@
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --input: 211, 100%, 10%, 1;
     --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;

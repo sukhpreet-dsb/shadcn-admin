@@ -7,6 +7,10 @@ import {
   IconUsers,
   IconBriefcase2,
   IconReportMoney,
+  IconHomeFilled,
+  IconCalendarEvent,
+  IconHaze,
+  IconFish
 } from '@tabler/icons-react'
 
 export interface NavLink {
@@ -22,10 +26,28 @@ export interface SideLink extends NavLink {
 
 export const sidelinks: SideLink[] = [
   {
-    title: 'Dashboard',
+    title: 'Home',
     label: '',
     href: '/',
-    icon: <IconLayoutDashboard size={18} />,
+    icon: <IconHomeFilled size={18} />,
+  },
+  {
+    title: 'Events',
+    label: '',
+    href: '/events',
+    icon: <IconCalendarEvent size={18} />,
+  },
+  {
+    title: 'Weather',
+    label: '',
+    href: '/weather',
+    icon: <IconHaze size={18} />,
+  },
+  {
+    title: 'Location',
+    label: '',
+    href: '/location',
+    icon: <IconFish size={18} />,
   },
   {
     title: 'Settings',
